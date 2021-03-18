@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
-import { root, Container } from './../../globalStyles';
+import { Container } from './../../globalStyles';
 
-export const DashboardpageContainer = styled(Container)``;
+export const DashboardpageContainer = styled(Container)`
+  display: flex;
+  min-height: 100vh;
+`;
