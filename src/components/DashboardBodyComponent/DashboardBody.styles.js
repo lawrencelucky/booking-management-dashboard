@@ -4,4 +4,5 @@ import { root } from './../../globalStyles';
 
 export const DashboardBodySection = styled.div`
   flex: 0.7;
+  color: ${root.textColor};
 `;
