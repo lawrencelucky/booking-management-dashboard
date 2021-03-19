@@ -6,18 +6,18 @@ import {
   LogoImg,
   NavContainer,
   NavItem,
-  NavItemLogo,
+  DashboardIcon,
+  GraphIcon,
+  CalendarIcon,
+  ListIcon,
+  EnvelopeIcon,
+  UsersIcon,
+  SettingsIcon,
   LogoutContainer,
   LogoutIcon,
 } from './Sidebar.styles';
 
 import Logo from './../../assets/logo-icon.svg';
-import HomeIcon from './../../assets/dashboard-active.svg';
-import AppointmentIcon from './../../assets/appointments.svg';
-import EnquiriesIcon from './../../assets/enquiries.svg';
-import MessageIcon from './../../assets/messages.svg';
-import UsersIcon from './../../assets/users.svg';
-import SettingsIcon from './../../assets/settings.svg';
 
 const Sidebar = () => {
   return (
@@ -27,32 +27,31 @@ const Sidebar = () => {
       </LogoContainer>
 
       <NavContainer>
-        <NavItem>
-          <NavItemLogo src={HomeIcon} alt='home' draggable={false} />
+        <NavItem to='/' exact>
+          <DashboardIcon className='icon' />
         </NavItem>
-        <NavItem>
-          <NavItemLogo
-            src={AppointmentIcon}
-            alt='appointment'
-            draggable={false}
-          />
+        <NavItem to='/stats' exact>
+          <GraphIcon className='icon' />
         </NavItem>
-        <NavItem>
-          <NavItemLogo src={EnquiriesIcon} alt='enquiry' draggable={false} />
+        <NavItem to='/appointment' exact>
+          <CalendarIcon className='icon' />
         </NavItem>
-        <NavItem>
-          <NavItemLogo src={MessageIcon} alt='message' draggable={false} />
+        <NavItem to='/enquiry' exact>
+          <ListIcon className='icon' />
         </NavItem>
-        <NavItem>
-          <NavItemLogo src={UsersIcon} alt='user' draggable={false} />
+        <NavItem to='/messages' exact>
+          <EnvelopeIcon className='icon' />
         </NavItem>
-        <NavItem>
-          <NavItemLogo src={SettingsIcon} alt='settings' draggable={false} />
+        <NavItem to='/users' exact>
+          <UsersIcon className='icon' />
+        </NavItem>
+        <NavItem to='/settings' exact>
+          <SettingsIcon className='icon' />
         </NavItem>
       </NavContainer>
 
       <LogoutContainer>
-        <LogoutIcon />
+        <LogoutIcon className='icon' />
       </LogoutContainer>
     </SidebarSection>
   );

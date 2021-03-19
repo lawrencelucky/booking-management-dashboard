@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import GlobalStyle from './globalStyles';
 
@@ -6,10 +7,14 @@ import Dashboard from './pages/Dashboardpage/Dashboardpage';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <GlobalStyle />
-      <Dashboard />
-    </>
+      <Switch>
+        <Route path='/'>
+          <Dashboard />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
