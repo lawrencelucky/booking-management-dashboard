@@ -5,7 +5,7 @@ import { DashboardBodySection } from './DashboardBody.styles';
 const DashboardBody = () => {
   return (
     <DashboardBodySection>
-      <p>Main Body</p>
+      <p>Main page</p>
     </DashboardBodySection>
   );
 };

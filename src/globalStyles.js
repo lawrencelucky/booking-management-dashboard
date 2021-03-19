@@ -6,7 +6,8 @@ export const root = {
   primaryBgColor: '#F7F8FA',
   secondaryBgColor: '#FFFFFF',
   secondaryDarkBgColor: '#322A7D',
-  fadedSecondaryDarkBgColor: '#69519E',
+  fadedSecondaryDarkBgColor: 'rgba(50, 42, 125, 0.3)',
+  opaqueSecondaryDarkBgColor: 'rgba(50, 42, 125, .95)',
   textColor: '#11141A',
   secondaryTextColor: '#354052',
   fadedTextColor: '#7F8FA4',
@@ -14,7 +15,10 @@ export const root = {
   darkBorderColor: '#E2E7EE',
   lightBorderColor: '#EAEAEA',
   oddColor: '#FFA101',
+  opaqueOddColor: 'rgba(255, 161, 1, 0.3)',
   boxShadowColor: '#BBC5D54D',
+  dangerColor: '#F35162',
+  opaqueDangerColor: 'rgba(243, 81, 98, 0.3)',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -34,7 +38,7 @@ html {
 body {
   font-family: ${root.primaryFont};
   font-size: 1.4rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.3;
   font-weight: 400;
   background-color: ${root.primaryBgColor};
@@ -55,6 +59,10 @@ a {
 ::selection {
   background-color: ${root.textColor};
   color: ${root.primaryBgColor};
+}
+
+&::-webkit-scrollbar {
+    display: none;
 }
 `;
 

@@ -12,13 +12,17 @@ import { root } from './../../globalStyles';
 const activeClassName = 'active';
 
 export const SidebarSection = styled.div`
-  flex: 0.07;
   background: ${root.secondaryBgColor};
   border-right: 1px solid ${root.darkBorderColor};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 0 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
 `;
 
 export const LogoContainer = styled.div`
