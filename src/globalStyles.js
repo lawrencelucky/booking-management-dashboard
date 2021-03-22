@@ -8,6 +8,7 @@ export const root = {
   secondaryDarkBgColor: '#322A7D',
   fadedSecondaryDarkBgColor: 'rgba(50, 42, 125, 0.3)',
   opaqueSecondaryDarkBgColor: 'rgba(50, 42, 125, .95)',
+  secondaryFadedDarkBgColor: '#69519E',
   textColor: '#11141A',
   secondaryTextColor: '#354052',
   fadedTextColor: '#7F8FA4',
@@ -71,6 +72,7 @@ export const Container = styled.div`
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 `;
 
 export default GlobalStyle;
