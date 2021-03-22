@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   box-sizing: border-box;
   font-family: ${root.primaryFont};
+  scrollbar-width: none;
 }
 
 html {
