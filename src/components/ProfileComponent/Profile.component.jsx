@@ -15,9 +15,9 @@ import UserDetails from '../UserDetailsComponent/UserDetails.component';
 import UpgradeCard from '../UpgradeCardComponent/UpgradeCard.component';
 import Reminder from '../ReminderComponent/Reminder.component';
 
-const Profile = () => {
+const Profile = ({ openProfile }) => {
   return (
-    <ProfileSection>
+    <ProfileSection openProfile={openProfile}>
       <ProfileHeader>
         <SearchContainer>
           <SearchIcon />

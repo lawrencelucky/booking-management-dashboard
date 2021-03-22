@@ -6,12 +6,12 @@ import Sidebar from '../../components/SidebarComponent/Sidebar.component';
 import DashboardBody from '../../components/DashboardBodyComponent/DashboardBody.component';
 import Profile from '../../components/ProfileComponent/Profile.component';
 
-const Dashboard = () => {
+const Dashboard = ({ openProfile, openSidebar }) => {
   return (
     <DashboardpageContainer>
-      <Sidebar />
+      <Sidebar openSidebar={openSidebar} />
       <DashboardBody />
-      <Profile />
+      <Profile openProfile={openProfile} />
     </DashboardpageContainer>
   );
 };

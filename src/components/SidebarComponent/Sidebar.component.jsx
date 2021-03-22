@@ -19,9 +19,9 @@ import {
 
 import Logo from './../../assets/logo-icon.svg';
 
-const Sidebar = () => {
+const Sidebar = ({ openSidebar }) => {
   return (
-    <SidebarSection>
+    <SidebarSection openSidebar={openSidebar}>
       <LogoContainer>
         <LogoImg src={Logo} alt='logo' draggable={false} />
       </LogoContainer>

@@ -13,7 +13,7 @@ export const QuickStatsHeader = styled.h3`
 
 export const QuickStatsCardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 3rem;
   margin-top: 2rem;
 `;

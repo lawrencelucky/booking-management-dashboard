@@ -39,6 +39,10 @@ export const UserContainerBottom = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
+
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+  }
 `;
 
 export const CopyContainer = styled.div`
@@ -62,6 +66,10 @@ export const CopyContainer = styled.div`
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  @media screen and (max-width: 350px) {
+    margin-bottom: 2rem;
   }
 `;
 

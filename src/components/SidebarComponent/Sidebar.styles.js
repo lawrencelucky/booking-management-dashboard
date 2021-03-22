@@ -23,6 +23,22 @@ export const SidebarSection = styled.div`
   left: 0;
   height: 100%;
   width: 5%;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 1000px) {
+    left: ${({ openSidebar }) => (openSidebar ? 0 : '-100%')};
+    width: 8%;
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 10%;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 13%;
+  }
 `;
 
 export const LogoContainer = styled.div`

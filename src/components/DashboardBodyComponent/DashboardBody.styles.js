@@ -11,15 +11,34 @@ export const DashboardBodySection = styled.div`
   top: 0;
   overflow-y: scroll;
   padding: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 95%;
+    padding-top: 7rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    left: 0;
+  }
 `;
 
 export const DashboardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
-export const DashboardHeaderTitle = styled.div``;
+export const DashboardHeaderTitle = styled.div`
+  @media screen and (max-width: 400px) {
+    margin-bottom: 2rem;
+  }
+`;
 
 export const DashboardHeaderHead = styled.h2`
   font-family: ${root.secondaryFont};
@@ -56,6 +75,7 @@ export const DashboardNavbar = styled.div`
 
 export const DashboardNavbarUl = styled.ul`
   display: flex;
+  overflow-x: scroll;
 `;
 
 export const DashboardNavItems = styled.li`
@@ -70,6 +90,7 @@ export const DashboardNavItems = styled.li`
   padding-bottom: 1rem;
   border-bottom: ${({ active }) =>
     active ? `3px solid ${root.oddColor}` : ''};
+  white-space: nowrap;
 
   &:not(:last-child) {
     margin-right: 3rem;
@@ -86,4 +107,5 @@ export const BookingsContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2rem;
   transition: all 0.3s ease-in-out;
+  justify-items: center;
 `;

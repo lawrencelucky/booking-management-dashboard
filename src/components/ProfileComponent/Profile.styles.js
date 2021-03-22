@@ -14,6 +14,25 @@ export const ProfileSection = styled.div`
   border-left: 1px solid ${root.darkBorderColor};
   padding: 3rem;
   overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 1200px) {
+    right: ${({ openProfile }) => (openProfile ? 0 : '-100%')};
+    width: 35%;
+    padding-top: 10rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    width: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 8rem 2rem 2rem;
+  }
 `;
 
 export const ProfileHeader = styled.div`
@@ -37,6 +56,10 @@ export const SearchContainer = styled.div`
       color: ${root.textColor};
       transition: all 0.3s ease-in-out;
     }
+  }
+
+  @media screen and (max-width: 400px) {
+    width: auto;
   }
 `;
 

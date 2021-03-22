@@ -6,6 +6,14 @@ export const BookingsCardContainer = styled.div`
   background: ${root.secondaryBgColor};
   padding: 2rem;
   border-radius: 10px;
+
+  @media screen and (max-width: 560px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+  }
 `;
 
 export const CardHeader = styled.div``;
