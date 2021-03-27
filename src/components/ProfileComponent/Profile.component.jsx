@@ -15,7 +15,7 @@ import UserDetails from '../UserDetailsComponent/UserDetails.component';
 import UpgradeCard from '../UpgradeCardComponent/UpgradeCard.component';
 import Reminder from '../ReminderComponent/Reminder.component';
 
-const Profile = ({ openProfile }) => {
+const Profile = ({ openProfile, modal, setModal }) => {
   return (
     <ProfileSection openProfile={openProfile}>
       <ProfileHeader>
@@ -33,7 +33,7 @@ const Profile = ({ openProfile }) => {
         </NotificationContainer>
       </ProfileHeader>
 
-      <UserDetails />
+      <UserDetails modal={modal} setModal={setModal} />
 
       <UpgradeCard />
 

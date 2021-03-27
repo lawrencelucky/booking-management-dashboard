@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   UserContainer,
@@ -16,11 +16,20 @@ import {
   Tooltip,
   TooltipText,
   EditButton,
+  InputModal,
+  EditInput,
+  SubmitEditButton,
 } from './UserDetails.styles';
 
 import User from './../../assets/user.svg';
 
-const UserDetails = () => {
+const UserDetails = ({ modal, setModal }) => {
+  const [username, setUsername] = useState('jonathan');
+
+  const editUserHandler = (e) => {
+    setUsername(e.target.value);
+  };
+
   return (
     <UserContainer>
       <UserContainerTop>
@@ -38,14 +47,28 @@ const UserDetails = () => {
       </UserContainerTop>
       <UserContainerBottom>
         <CopyContainer>
-          <UserLink>scheddo.com/jonathan</UserLink>
+          <UserLink>sheddo.com/{username}</UserLink>
           <CopyIcon className='icon' />
           <Tooltip className='tooltip'>
             <TooltipText>Copy URL</TooltipText>
           </Tooltip>
         </CopyContainer>
-        <EditButton>Edit Link</EditButton>
+        <EditButton onClick={() => setModal(true)}>Edit Link</EditButton>
       </UserContainerBottom>
+      {modal && (
+        <InputModal onClick={() => setModal(false)}>
+          <EditInput
+            type='text'
+            value={username}
+            onChange={editUserHandler}
+            autoFocus
+            placeholder='Your name here.'
+          />
+          <SubmitEditButton onClick={() => setModal(false)}>
+            Submit
+          </SubmitEditButton>
+        </InputModal>
+      )}
     </UserContainer>
   );
 };

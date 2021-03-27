@@ -20,30 +20,54 @@ const Header = ({
   openProfile,
   setOpenSidebar,
   openSidebar,
+  setModal,
 }) => {
   return (
     <HeaderContainer>
       <SidebarToggler>
         {openSidebar ? (
-          <CloseMenuIcon onClick={() => setOpenSidebar(false)} />
+          <CloseMenuIcon
+            onClick={() => {
+              setOpenSidebar(false);
+              setModal(false);
+            }}
+          />
         ) : (
-          <MenuIcon onClick={() => setOpenSidebar(true)} />
+          <MenuIcon
+            onClick={() => {
+              setOpenSidebar(true);
+              setModal(false);
+            }}
+          />
         )}
       </SidebarToggler>
 
       <LogoImageContainer>
-        <LogoImage src={Logo} alt='logo' draggable={false} />
+        <LogoImage
+          src={Logo}
+          alt='logo'
+          draggable={false}
+          onClick={() => setModal(false)}
+        />
       </LogoImageContainer>
 
       <UserImageContainer>
         {openProfile ? (
-          <CloseIcon onClick={() => setOpenProfile(false)} />
+          <CloseIcon
+            onClick={() => {
+              setOpenProfile(false);
+              setModal(false);
+            }}
+          />
         ) : (
           <UserImage
             src={User}
             alt='User'
             draggable={false}
-            onClick={() => setOpenProfile(true)}
+            onClick={() => {
+              setOpenProfile(true);
+              setModal(false);
+            }}
           />
         )}
       </UserImageContainer>

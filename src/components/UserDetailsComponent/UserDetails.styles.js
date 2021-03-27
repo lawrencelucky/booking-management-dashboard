@@ -136,3 +136,43 @@ export const EditButton = styled.button`
     color: ${root.primaryBgColor};
   }
 `;
+
+export const InputModal = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+`;
+
+export const EditInput = styled.input`
+  margin-bottom: 2rem;
+  border: 1px solid ${root.secondaryDarkBgColor};
+  background: transparent;
+  color: ${root.secondaryBgColor};
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+`;
+
+export const SubmitEditButton = styled.button`
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: ${root.secondaryFont};
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: ${root.secondaryDarkBgColor};
+  color: ${root.secondaryBgColor};
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${root.secondaryFadedDarkBgColor};
+  }
+`;

@@ -9,6 +9,7 @@ import Header from './components/HeaderComponent/Header.component';
 const App = () => {
   const [openProfile, setOpenProfile] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [modal, setModal] = useState(false);
 
   return (
     <Router>
@@ -18,10 +19,16 @@ const App = () => {
         openProfile={openProfile}
         setOpenSidebar={setOpenSidebar}
         openSidebar={openSidebar}
+        setModal={setModal}
       />
       <Switch>
         <Route path='/'>
-          <Dashboard openProfile={openProfile} openSidebar={openSidebar} />
+          <Dashboard
+            openProfile={openProfile}
+            openSidebar={openSidebar}
+            modal={modal}
+            setModal={setModal}
+          />
         </Route>
       </Switch>
     </Router>
